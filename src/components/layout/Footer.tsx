@@ -10,7 +10,7 @@ export function Footer() {
                     {/* Brand Column */}
                     <div className="col-span-1 md:col-span-2 space-y-4">
                         <Link href="/" className="flex items-center gap-2 group">
-                            <div className="relative w-12 h-12 bg-white rounded-lg p-1 shadow-sm transition-transform group-hover:scale-110 group-hover:rotate-3 overflow-hidden">
+                            <div className="relative w-16 h-16 bg-white rounded-lg p-1 shadow-sm transition-transform group-hover:scale-110 group-hover:rotate-3 overflow-hidden">
                                 <Image
                                     src="/logo.png"
                                     alt="Razzel Wrap"

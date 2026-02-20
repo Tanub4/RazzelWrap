@@ -141,8 +141,8 @@ export function Header() {
                     <div className="flex items-center justify-between gap-4">
                         {/* Logo */}
                         <Link href="/" className="flex items-center gap-2 cursor-pointer hover:scale-105 transition-transform duration-300">
-                            <div className="flex items-center gap-2 md:gap-3">
-                                <div className="relative h-12 md:h-16 w-auto">
+                            <div className="flex items-center gap-2 md:gap-4">
+                                <div className="relative h-16 md:h-24 w-auto drop-shadow-sm">
                                     <Image
                                         src="/logo.png"
                                         alt="Razzel Wrap Logo"
@@ -153,9 +153,9 @@ export function Header() {
                                         priority
                                     />
                                 </div>
-                                <div className="flex flex-col leading-none">
-                                    <span className="text-lg md:text-2xl font-black tracking-tight text-black">Razzel</span>
-                                    <span className="text-[10px] md:text-xs font-bold text-black/70">Wrap</span>
+                                <div className="flex flex-col leading-tight">
+                                    <span className="text-xl md:text-3xl font-black tracking-tighter text-black">Razzel</span>
+                                    <span className="text-xs md:text-sm font-extrabold text-black/80 uppercase tracking-widest">Wrap</span>
                                 </div>
                             </div>
                         </Link>
