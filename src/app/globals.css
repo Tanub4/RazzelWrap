@@ -60,8 +60,8 @@
     --popover: oklch(1 0 0);
     --popover-foreground: oklch(0.25 0.04 18);
 
-    --primary: oklch(0.50 0.08 15);
-    /* #8e606b - New Primary Color */
+    --primary: oklch(0.48 0.05 18);
+    /* #826161 - Matched to Logo Background */
     --primary-foreground: oklch(1 0 0);
     /* White */
 
