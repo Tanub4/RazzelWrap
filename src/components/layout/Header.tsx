@@ -227,17 +227,22 @@ export function Header() {
                         )}
 
                         {/* Actions */}
-                        <button
-                            onClick={toggleCart}
-                            className="relative p-2 bg-white/20 rounded-full hover:bg-white/30 text-white transition-colors"
-                        >
-                            <ShoppingCart className="w-6 h-6" />
-                            {totalItems > 0 && (
-                                <span className="absolute -top-1 -right-1 bg-white text-primary text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">
-                                    {totalItems}
-                                </span>
-                            )}
-                        </button>
+                        <div className="flex items-center gap-3">
+                            <span className="hidden sm:block text-xs font-bold text-white/90 tracking-wide animate-pulse-slow">
+                                hello there !
+                            </span>
+                            <button
+                                onClick={toggleCart}
+                                className="relative p-2 bg-white/20 rounded-full hover:bg-white/30 text-white transition-colors"
+                            >
+                                <ShoppingCart className="w-6 h-6" />
+                                {totalItems > 0 && (
+                                    <span className="absolute -top-1 -right-1 bg-white text-primary text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">
+                                        {totalItems}
+                                    </span>
+                                )}
+                            </button>
+                        </div>
 
                         {/* Mobile Menu Trigger - Removed as requested, replaced by Bottom Nav */}
                     </div>
