@@ -23,6 +23,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Razzel Wrap - Premium Gift Wrapping",
   description: "Exquisite papers, ribbons, and boxes for every occasion.",
+  icons: {
+    icon: "/favicon.ico", // Or /icon.png
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({
