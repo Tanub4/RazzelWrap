@@ -19,17 +19,17 @@ export function CategoryGrid() {
                 <div className="grid grid-cols-6 md:flex md:flex-wrap md:justify-center gap-1 md:gap-14">
                     {categories.map((cat, index) => (
                         <div key={index} className="group cursor-pointer flex flex-col items-center min-w-0">
-                            <div className="relative w-10 h-10 md:w-24 md:h-24 mb-1 md:mb-3 flex items-center justify-center">
+                            <div className="relative w-10 h-10 md:w-16 md:h-16 mb-1 md:mb-2 flex items-center justify-center">
                                 {/* Animated Background Blobs - Light Tints for Contrast */}
                                 <div className={`absolute inset-0 rounded-full bg-white/20 animate-blob`} style={{ animationDuration: `${3 + index}s` }}></div>
                                 <div className={`absolute inset-0 rounded-full bg-secondary/30 animate-blob animation-delay-2000`} style={{ animationDuration: `${4 + index}s` }}></div>
 
                                 {/* Icon Container */}
-                                <div className="relative w-8 h-8 md:w-16 md:h-16 bg-white rounded-[35%] rotate-12 group-hover:rotate-0 transition-all duration-500 flex items-center justify-center shadow-md group-hover:scale-110 z-10">
-                                    <cat.icon className="w-4 h-4 md:w-8 md:h-8 text-primary -rotate-12 group-hover:rotate-0 transition-transform duration-500" strokeWidth={1.5} />
+                                <div className="relative w-8 h-8 md:w-12 md:h-12 bg-white rounded-[35%] rotate-12 group-hover:rotate-0 transition-all duration-500 flex items-center justify-center shadow-md group-hover:scale-110 z-10">
+                                    <cat.icon className="w-4 h-4 md:w-6 md:h-6 text-primary -rotate-12 group-hover:rotate-0 transition-transform duration-500" strokeWidth={1.5} />
                                 </div>
                             </div>
-                            <h3 className="font-extrabold text-center text-white text-[8px] md:text-sm tracking-tighter md:tracking-wide group-hover:scale-105 transition-transform truncate w-full px-0.5 drop-shadow-sm">
+                            <h3 className="font-extrabold text-center text-white text-[8px] md:text-[11px] tracking-tighter md:tracking-tight group-hover:scale-105 transition-transform truncate w-full px-0.5 drop-shadow-sm">
                                 {cat.name}
                             </h3>
                         </div>
