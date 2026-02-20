@@ -144,7 +144,7 @@ export function Header() {
                             <div className="flex items-center gap-2 md:gap-3">
                                 <div className="relative h-12 md:h-16 w-auto">
                                     <Image
-                                        src="/razzel-logo.jpg"
+                                        src="/logo.png"
                                         alt="Razzel Wrap Logo"
                                         width={0}
                                         height={0}

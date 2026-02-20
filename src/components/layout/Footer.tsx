@@ -12,7 +12,7 @@ export function Footer() {
                         <Link href="/" className="flex items-center gap-2 group">
                             <div className="relative w-12 h-12 bg-white rounded-lg p-1 shadow-sm transition-transform group-hover:scale-110 group-hover:rotate-3 overflow-hidden">
                                 <Image
-                                    src="/razzel-logo.jpg"
+                                    src="/logo.png"
                                     alt="Razzel Wrap"
                                     fill
                                     className="object-contain"
