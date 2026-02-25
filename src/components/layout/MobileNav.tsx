@@ -40,14 +40,14 @@ export function MobileNav() {
                         >
                             <div className={cn(
                                 "p-1 rounded-xl transition-colors duration-200",
-                                isActive ? "text-pink-600" : "text-gray-400 hover:text-gray-600"
+                                isActive ? "text-primary" : "text-gray-400 hover:text-gray-600"
                             )}>
                                 <item.icon className={cn("w-7 h-7", isActive && "stroke-[2.5px]")} />
                             </div>
 
                             {/* Active Dot Indicator */}
                             {isActive && (
-                                <div className="absolute -bottom-2 w-1 h-1 bg-pink-600 rounded-full"></div>
+                                <div className="absolute -bottom-2 w-1 h-1 bg-primary rounded-full"></div>
                             )}
                         </Link>
                     );

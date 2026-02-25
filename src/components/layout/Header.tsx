@@ -142,20 +142,19 @@ export function Header() {
                         {/* Logo */}
                         <Link href="/" className="flex items-center gap-2 cursor-pointer hover:scale-105 transition-transform duration-300">
                             <div className="flex items-center gap-2 md:gap-4">
-                                <div className="relative h-16 md:h-24 w-auto drop-shadow-sm">
+                                <div className="relative h-16 md:h-20 w-auto">
                                     <Image
                                         src="/logo.png"
                                         alt="Razzel Wrap Logo"
-                                        width={0}
-                                        height={0}
-                                        sizes="100vw"
-                                        className="h-full w-auto object-contain"
+                                        width={80}
+                                        height={80}
+                                        className="h-full w-auto object-contain brightness-0 invert"
                                         priority
                                     />
                                 </div>
                                 <div className="flex flex-col leading-tight">
-                                    <span className="text-xl md:text-3xl font-black tracking-tighter text-black">Razzel</span>
-                                    <span className="text-xs md:text-sm font-extrabold text-black/80 uppercase tracking-widest">Wrap</span>
+                                    <span className="text-xl md:text-3xl font-black tracking-tighter text-white">Razzel</span>
+                                    <span className="text-xs md:text-sm font-extrabold text-white/90 uppercase tracking-widest leading-none">Wrap</span>
                                 </div>
                             </div>
                         </Link>
@@ -228,8 +227,8 @@ export function Header() {
 
                         {/* Actions */}
                         <div className="flex items-center gap-3">
-                            <span className="hidden sm:block text-xs font-bold text-white/90 tracking-wide animate-pulse-slow">
-                                hello there !
+                            <span className="text-[10px] sm:text-xs font-bold text-white/90 tracking-wide animate-pulse-slow">
+                                hey there !
                             </span>
                             <button
                                 onClick={toggleCart}

@@ -81,7 +81,7 @@ export function HeroSection() {
     return (
         <div className="w-full px-4 sm:px-6 pt-4 pb-2 md:pt-6 max-w-7xl mx-auto">
             {/* Banner Card Container */}
-            <section className="relative w-full h-[380px] md:h-[400px] lg:h-[500px] rounded-3xl overflow-hidden shadow-xl border border-black/5 group">
+            <section className="relative w-full h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] rounded-3xl overflow-hidden shadow-xl border border-black/5 group">
                 <AnimatePresence mode="wait">
                     <motion.div
                         key={BANNER_DATA[currentSlide].id}
@@ -90,7 +90,7 @@ export function HeroSection() {
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.5 }}
                         className={`absolute inset-0 w-full h-full flex flex-col md:flex-row items-center md:items-center justify-center md:justify-start ${BANNER_DATA[currentSlide].type === "full"
-                            ? "px-6 py-8 md:px-12 md:py-0"
+                            ? "px-6 py-4 md:px-12 md:py-0"
                             : "px-6 md:px-20"
                             }`}
                         style={{ backgroundColor: BANNER_DATA[currentSlide].bgColor }}
@@ -128,22 +128,22 @@ export function HeroSection() {
                         )}
 
                         {/* Text Content */}
-                        <div className={`relative z-10 w-full flex flex-col items-center md:items-start text-center md:text-left space-y-4 md:space-y-6 max-w-2xl`}>
+                        <div className={`relative z-10 w-full flex flex-col items-center md:items-start text-center md:text-left space-y-2 md:space-y-6 max-w-2xl`}>
                             <motion.div
                                 initial={{ y: 20, opacity: 0 }}
                                 animate={{ y: 0, opacity: 1 }}
                                 transition={{ delay: 0.2, duration: 0.5 }}
                             >
-                                <span className="inline-block py-1 px-3 rounded-full bg-white/20 backdrop-blur-sm text-[10px] md:text-xs font-bold tracking-widest uppercase mb-4 text-white border border-white/20 shadow-sm">
+                                <span className="inline-block py-0.5 px-2 rounded-full bg-white/20 backdrop-blur-sm text-[8px] md:text-xs font-bold tracking-widest uppercase mb-2 md:mb-4 text-white border border-white/20 shadow-sm">
                                     {BANNER_DATA[currentSlide].subtitle}
                                 </span>
-                                <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-[1.1] tracking-tight drop-shadow-sm" style={{ color: BANNER_DATA[currentSlide].textColor }}>
+                                <h1 className="text-2xl md:text-6xl lg:text-7xl font-black leading-tight tracking-tight drop-shadow-sm" style={{ color: BANNER_DATA[currentSlide].textColor }}>
                                     {BANNER_DATA[currentSlide].title.split(" ").slice(0, 2).join(" ")} <br className="hidden md:block" />
                                     <span style={{ color: BANNER_DATA[currentSlide].bgColor === "#BC7F82" ? "#FDF2F4" : BANNER_DATA[currentSlide].accentColor }}>
                                         With Love
                                     </span>
                                 </h1>
-                                <p className="text-sm md:text-lg font-medium opacity-90 max-w-xs md:max-w-md mx-auto md:mx-0 leading-relaxed" style={{ color: BANNER_DATA[currentSlide].textColor }}>
+                                <p className="text-[10px] md:text-lg font-medium opacity-90 max-w-[200px] md:max-w-md mx-auto md:mx-0 leading-tight md:leading-relaxed" style={{ color: BANNER_DATA[currentSlide].textColor }}>
                                     {BANNER_DATA[currentSlide].description}
                                 </p>
                             </motion.div>

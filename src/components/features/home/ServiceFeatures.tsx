@@ -31,8 +31,8 @@ export function ServiceFeatures() {
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-4 lg:gap-8">
                     {features.map((feature, idx) => (
                         <div key={idx} className="flex flex-row items-center text-left gap-3 cursor-default">
-                            <div className="w-8 h-8 rounded-full bg-pink-50 flex items-center justify-center shrink-0">
-                                <feature.icon className="w-3.5 h-3.5 text-pink-500" strokeWidth={2} />
+                            <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                                <feature.icon className="w-3.5 h-3.5 text-primary" strokeWidth={2} />
                             </div>
                             <div>
                                 <h3 className="font-bold text-neutral-900 text-[10px] uppercase tracking-wider">{feature.title}</h3>

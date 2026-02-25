@@ -77,10 +77,10 @@ export function ShopListing({ products }: ShopListingProps) {
                                     className="group flex flex-col items-center gap-2 w-full"
                                 >
                                     <div className={cn(
-                                        "relative w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center transition-all duration-300 border",
+                                        "relative w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center transition-all duration-300 border-2",
                                         isActive
                                             ? "bg-primary text-white border-primary shadow-md shadow-primary/20"
-                                            : "bg-white text-gray-400 border-gray-100 group-hover:border-primary/50 group-hover:text-primary"
+                                            : "bg-white text-primary border-primary/20"
                                     )}>
                                         <cat.icon className="w-6 h-6 md:w-7 md:h-7" strokeWidth={1.5} />
                                     </div>

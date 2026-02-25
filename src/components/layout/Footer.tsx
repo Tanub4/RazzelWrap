@@ -10,15 +10,15 @@ export function Footer() {
                     {/* Brand Column */}
                     <div className="col-span-1 md:col-span-2 space-y-4">
                         <Link href="/" className="flex items-center gap-2 group">
-                            <div className="relative w-16 h-16 bg-white rounded-lg p-1 shadow-sm transition-transform group-hover:scale-110 group-hover:rotate-3 overflow-hidden">
+                            <div className="relative w-16 h-16 bg-primary rounded-lg p-2 shadow-sm transition-transform group-hover:scale-110 group-hover:rotate-3 overflow-hidden border border-primary/20">
                                 <Image
                                     src="/logo.png"
                                     alt="Razzel Wrap"
                                     fill
-                                    className="object-contain"
+                                    className="object-contain p-1 brightness-0 invert"
                                 />
                             </div>
-                            <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
+                            <span className="text-xl font-black text-primary tracking-tight">
                                 Razzel Wrap
                             </span>
                         </Link>
@@ -26,16 +26,20 @@ export function Footer() {
                             Your destination for premium gift wrapping supplies. Make every gift unforgettable with our curated collection.
                         </p>
                         <div className="flex gap-3">
-                            {["Facebook", "Instagram", "Twitter"].map((social, i) => (
+                            {[
+                                { name: "Facebook", icon: Facebook, href: "#" },
+                                { name: "Instagram", icon: Instagram, href: "https://www.instagram.com/razzel_wrap" },
+                                { name: "Twitter", icon: Twitter, href: "#" }
+                            ].map((social, i) => (
                                 <a
                                     key={i}
-                                    href="#"
-                                    className="w-8 h-8 rounded-full bg-white/50 flex items-start justify-center text-gray-400 hover:bg-primary hover:text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-md pt-2"
-                                    aria-label={social}
+                                    href={social.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="w-8 h-8 rounded-full bg-white/50 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-md pt-0"
+                                    aria-label={social.name}
                                 >
-                                    {i === 0 && <Facebook className="w-4 h-4" />}
-                                    {i === 1 && <Instagram className="w-4 h-4" />}
-                                    {i === 2 && <Twitter className="w-4 h-4" />}
+                                    <social.icon className="w-4 h-4" />
                                 </a>
                             ))}
                         </div>
@@ -78,7 +82,7 @@ export function Footer() {
                             loading="lazy"
                             referrerPolicy="no-referrer-when-downgrade"
                             title="Razzel Wrap Location"
-                            className="grayscale hover:grayscale-0 transition-all duration-500"
+                            className=""
                         ></iframe>
                     </div>
 
