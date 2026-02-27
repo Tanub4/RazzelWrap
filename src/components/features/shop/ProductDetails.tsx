@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, Minus, Plus, Star, Share2, Heart, ChevronLeft, ChevronRight, MapPin, Truck } from "lucide-react";
-import { products as localProducts } from "@/data/products";
+import { MOCK_PRODUCTS as localProducts } from "@/lib/mock-products";
 import { useCart } from "@/context/CartContext";
 import { Button } from "@/components/ui/button";
 import { notFound, useRouter } from "next/navigation";

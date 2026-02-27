@@ -195,35 +195,5 @@ export const MOCK_PRODUCTS: Product[] = [
         description: "Personalized 3D moon lamp with your photo and text.",
         discountPercentage: 18,
         type: "Custom"
-    },
-    {
-        _id: "5",
-        id: "5",
-        name: "Satin Ribbon Set - Pastel Pink",
-        price: 299,
-        salePrice: 249,
-        image: "/images/Category/dog.png", // Placeholder
-        images: ["/images/Category/dog.png"],
-        category: "Others",
-        rating: 4.9,
-        stock: 100,
-        description: "Luxurious satin ribbons in a set of 3 pastel shades.",
-        discountPercentage: 17,
-        type: "Standard"
-    },
-    {
-        _id: "6",
-        id: "6",
-        name: "Metallic Gift Bag - Medium",
-        price: 129,
-        salePrice: 129,
-        image: "/images/Category/cat.png", // Placeholder
-        images: ["/images/Category/cat.png"],
-        category: "Others",
-        rating: 4.4,
-        stock: 80,
-        description: "Shiny metallic gift bag with sturdy handles.",
-        discountPercentage: 0,
-        type: "Standard"
     }
 ];
