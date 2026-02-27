@@ -137,7 +137,7 @@ export function Header() {
 
             {/* Main Header */}
             <header className={`sticky top-0 z-50 bg-primary border-none shadow-none ${isProductDetails ? 'hidden md:block' : ''}`}>
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-4 pb-2">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 py-2">
                     <div className="flex items-center justify-between gap-4">
                         {/* Logo */}
                         <Link href="/" className="flex items-center gap-2 cursor-pointer hover:scale-105 transition-transform duration-300">
@@ -227,7 +227,7 @@ export function Header() {
 
                         {/* Actions */}
                         <div className="flex items-center gap-3">
-                            <span className="text-[10px] sm:text-xs font-bold text-white/90 tracking-wide animate-pulse-slow">
+                            <span className="text-sm sm:text-base font-bold text-white/90 tracking-wide animate-pulse-slow">
                                 hey there !
                             </span>
                             <button
@@ -248,7 +248,7 @@ export function Header() {
 
                     {/* Search Bar (Mobile - Below) - Conditional */}
                     {isSearchVisible && (
-                        <div className="md:hidden mt-4 relative group pb-2">
+                        <div className="md:hidden mt-2 relative group pb-2">
                             <div className="relative">
                                 <input
                                     type="text"

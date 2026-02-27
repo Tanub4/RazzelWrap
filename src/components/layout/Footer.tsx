@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { Facebook, Instagram, Twitter, PawPrint, Mail, ArrowRight, MapPin, Phone } from "lucide-react";
 import Image from "next/image";
@@ -102,39 +104,44 @@ export function Footer() {
 
 
 
-                    {/* Newsletter */}
+                    {/* Stay Connected / Direct Message */}
                     <div className="col-span-1">
                         <h3 className="font-bold text-neutral-900 mb-4 text-sm tracking-wide">Stay Connected</h3>
-                        <div className="relative mb-6 group">
+                        <form
+                            onSubmit={(e) => {
+                                e.preventDefault();
+                                const form = e.target as HTMLFormElement;
+                                const message = (form.elements.namedItem('message') as HTMLInputElement).value;
+                                if (message.trim()) {
+                                    window.open(`mailto:hello@razzelwrap.com?subject=Inquiry from Website&body=${encodeURIComponent(message)}`, '_blank');
+                                    form.reset();
+                                }
+                            }}
+                            className="relative mb-6 group"
+                        >
                             <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 group-focus-within:text-primary transition-colors" />
                             <input
-                                suppressHydrationWarning
-                                type="email"
-                                placeholder="Email address"
+                                name="message"
+                                type="text"
+                                placeholder="Message here..."
                                 className="w-full bg-white/50 border border-gray-200 rounded-lg py-2.5 pl-9 pr-10 text-xs focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                             />
                             <button
-                                suppressHydrationWarning
+                                type="submit"
+                                aria-label="Send Message"
                                 className="absolute right-1 top-1 p-1.5 bg-black rounded-md text-white hover:bg-primary hover:text-white transition-all duration-300 shadow-sm hover:shadow"
                             >
                                 <ArrowRight className="w-3.5 h-3.5" />
                             </button>
-                        </div>
+                        </form>
                     </div>
                 </div>
 
                 {/* Bottom Bar */}
-                <div className="border-t border-primary/20 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p className="text-gray-400 text-[10px]">
+                <div className="border-t border-primary/20 pt-6 flex justify-center items-center">
+                    <p className="text-gray-400 text-[10px] text-center">
                         © 2026 Razzel Wrap. All rights reserved.
                     </p>
-                    <div className="flex gap-3 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
-                        {/* Payment Icons Placeholder */}
-                        <div className="h-5 w-8 bg-gray-200 rounded"></div>
-                        <div className="h-5 w-8 bg-gray-200 rounded"></div>
-                        <div className="h-5 w-8 bg-gray-200 rounded"></div>
-                        <div className="h-5 w-8 bg-gray-200 rounded"></div>
-                    </div>
                 </div>
             </div>
         </footer>
